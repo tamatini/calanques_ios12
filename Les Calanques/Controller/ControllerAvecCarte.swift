@@ -14,9 +14,20 @@ class ControllerAvecCarte: UIViewController {
     
     @IBOutlet weak var mapView: MKMapView!
     
+    var calanques: [Calanque] = CalanqueCollection().all()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        addAnnotation()
+    }
+    
+    func addAnnotation() {
+        for calanque in calanques {
+            let annotation = MKPointAnnotation()
+            annotation.coordinate = calanque.coordonee
+            annotation.title = calanque.nom
+            mapView.addAnnotation(annotation)
+        }
     }
     
     @IBAction func segmentedChanged(_ sender: UISegmentedControl) {
