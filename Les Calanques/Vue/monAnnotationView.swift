@@ -10,6 +10,14 @@ import UIKit
 import MapKit
 
 class monAnnotationView: MKAnnotationView {
+    
+    var controller: ControllerAvecCarte?
+    
+    init(controller: ControllerAvecCarte, annotation: MKAnnotation?, reuseIdentifier: String?) {
+        self.controller = controller
+        super.init(annotation: annotation, reuseIdentifier: reuseIdentifier)
+        setupAnnotation()
+    }
 
     override init(annotation: MKAnnotation?, reuseIdentifier: String?) {
         super.init(annotation: annotation, reuseIdentifier: reuseIdentifier)
@@ -44,7 +52,7 @@ class monAnnotationView: MKAnnotationView {
     }
     
     func setupCenter() -> UIView? {
-        guard let anno = annotation as? MonAnnotation else { return nil}
+        guard let anno = annotation as? MonAnnotation else { return nil }
         let view = UIView(frame: CGRect(x: 0, y: 0, width: 125, height: 125))
         view.translatesAutoresizingMaskIntoConstraints = false
         view.widthAnchor.constraint(equalToConstant: 125).isActive = true
@@ -53,11 +61,14 @@ class monAnnotationView: MKAnnotationView {
         let imageView = UIImageView(frame: view.bounds)
         imageView.image = anno.calanque.image
         imageView.clipsToBounds = true
-        imageView.addSubview(imageView)
+        imageView.contentMode = .scaleAspectFill
+        view.addSubview(imageView)
         return view
     }
     
     @objc func detail() {
+        guard let anno = annotation as? MonAnnotation else { return }
+        controller?.toDetail(calanque: anno.calanque)
     }
     
     @objc func gps() {

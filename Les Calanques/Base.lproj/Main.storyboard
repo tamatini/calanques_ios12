@@ -321,7 +321,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="fEA-2R-TjL">
                         <nil key="title"/>
-                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="51R-WO-njA">
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="51R-WO-njA">
                             <rect key="frame" x="81.5" y="7.5" width="212" height="29"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <constraints>
@@ -344,6 +344,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="MQs-un-1Em" id="b7z-Mp-n4I"/>
+                        <segue destination="jee-he-ZlH" kind="show" identifier="Detail" id="V1d-tb-Ap5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
@@ -522,6 +523,6 @@
         <image name="sugiton" width="1600" height="896"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Z2d-LQ-IFP"/>
+        <segue reference="V1d-tb-Ap5"/>
     </inferredMetricsTieBreakers>
 </document>

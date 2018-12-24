@@ -22,6 +22,18 @@ class ControllerAvecCarte: UIViewController, MKMapViewDelegate {
         addAnnotation()
     }
     
+    func toDetail(calanque: Calanque) {
+        performSegue(withIdentifier: "Detail", sender: calanque)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "Detail" {
+        if let controller = segue.destination as? DetailViewController {
+            controller.calanqueRecue = sender as? Calanque
+            }
+        }
+    }
+    
     func addAnnotation() {
         for calanque in calanques {
        //     let annotation = MKPointAnnotation()
@@ -36,17 +48,26 @@ class ControllerAvecCarte: UIViewController, MKMapViewDelegate {
         }
     }
     
+    
+    
+    
+    
+    
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        let reuseIdentifier = "ReusiID"
+        let reuseIdentifier = "ReuseID"
         if annotation.isKind(of: MKUserLocation.self) {
             return nil
         }
+   
         
         if let anno = annotation as? MonAnnotation {
             var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseIdentifier)
             if annotationView == nil {
                 
-                annotationView = monAnnotationView(annotation: anno, reuseIdentifier: reuseIdentifier)
+                //override
+                //annotationView = monAnnotationView(annotation: anno, reuseIdentifier: reuseIdentifier)
+                
+                annotationView = monAnnotationView(controller: self, annotation: anno, reuseIdentifier: reuseIdentifier)
                 
                 //annotationView = MKAnnotationView(annotation: anno, reuseIdentifier: reuseIdentifier)
                 //annotationView?.image = UIImage(named: "placeholder")
@@ -58,6 +79,7 @@ class ControllerAvecCarte: UIViewController, MKMapViewDelegate {
         }
         return nil
     }
+        
     @IBAction func segmentedChanged(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 0: mapView.mapType = MKMapType.standard
