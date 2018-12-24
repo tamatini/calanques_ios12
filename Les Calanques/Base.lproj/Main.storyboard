@@ -305,14 +305,49 @@
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="MQs-un-1Em">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="MQs-un-1Em" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" id="AVr-uN-Rng"/>
+                            <constraint firstItem="MQs-un-1Em" firstAttribute="bottom" secondItem="O1u-W8-tvY" secondAttribute="bottom" id="GeU-kc-fcG"/>
+                            <constraint firstItem="MQs-un-1Em" firstAttribute="trailing" secondItem="O1u-W8-tvY" secondAttribute="trailing" id="J8a-tz-2dh"/>
+                            <constraint firstItem="MQs-un-1Em" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" id="wIV-y2-V41"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="fEA-2R-TjL"/>
+                    <navigationItem key="navigationItem" id="fEA-2R-TjL">
+                        <nil key="title"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="51R-WO-njA">
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="27" id="YVE-WE-sFx"/>
+                            </constraints>
+                            <segments>
+                                <segment title="Standard"/>
+                                <segment title="Sattelite"/>
+                                <segment title="Hybrid"/>
+                            </segments>
+                            <connections>
+                                <action selector="segmentedChanged:" destination="8rJ-Kc-sve" eventType="valueChanged" id="ktu-Qf-zX5"/>
+                            </connections>
+                        </segmentedControl>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="placeholder" id="T4i-aF-oI8">
+                            <connections>
+                                <action selector="getPosition:" destination="8rJ-Kc-sve" id="JiX-Yi-qTS"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="mapView" destination="MQs-un-1Em" id="b7z-Mp-n4I"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1879" y="779"/>
+            <point key="canvasLocation" x="1877.5999999999999" y="778.56071964017997"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="F8O-Pc-a2b">
@@ -481,6 +516,7 @@
         <image name="callelongue" width="329.14285278320312" height="219.29142761230469"/>
         <image name="earth" width="25.600000381469727" height="25.600000381469727"/>
         <image name="list" width="25.600000381469727" height="25.600000381469727"/>
+        <image name="placeholder" width="32" height="32"/>
         <image name="port pin" width="245.75999450683594" height="164.16000366210938"/>
         <image name="sugiton" width="1600" height="896"/>
     </resources>
