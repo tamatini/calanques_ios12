@@ -40,16 +40,30 @@ class ControllerAvecTableView: UIViewController, UITableViewDelegate, UITableVie
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 200
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: segueID, sender: calanques[indexPath.row])
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == segueID, let vc = segue.destination as? DetailViewController {
+        vc.calanqueRecue = sender as? Calanque
+        }
+    }
         
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func reloadAction(_ sender: Any) {
+        calanques = CalanqueCollection().all()
+        tableView.reloadData()
     }
-    */
-
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            calanques.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        } else if editingStyle == .insert {
+        print("Je pourrais éventuellement ajouter un élément")
+            }
+    }
 }
