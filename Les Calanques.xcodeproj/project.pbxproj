@@ -15,6 +15,7 @@
 		019E442621D0CBBC008CD459 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019E442521D0CBBC008CD459 /* DetailViewController.swift */; };
 		019E442821D0E0CB008CD459 /* bouton_Arrondi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019E442721D0E0CB008CD459 /* bouton_Arrondi.swift */; };
 		019E442A21D0E849008CD459 /* MonAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019E442921D0E849008CD459 /* MonAnnotation.swift */; };
+		019E442C21D0EBC3008CD459 /* monAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019E442B21D0EBC3008CD459 /* monAnnotationView.swift */; };
 		01E816A021CE35810074E1DD /* Calanques.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E8169F21CE35810074E1DD /* Calanques.swift */; };
 		01E816A221CE38120074E1DD /* CalanqueCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E816A121CE38120074E1DD /* CalanqueCollection.swift */; };
 		01E816A421CE3A660074E1DD /* ControllerAvecTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E816A321CE3A660074E1DD /* ControllerAvecTableView.swift */; };
@@ -35,6 +36,7 @@
 		019E442521D0CBBC008CD459 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		019E442721D0E0CB008CD459 /* bouton_Arrondi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bouton_Arrondi.swift; sourceTree = "<group>"; };
 		019E442921D0E849008CD459 /* MonAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonAnnotation.swift; sourceTree = "<group>"; };
+		019E442B21D0EBC3008CD459 /* monAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = monAnnotationView.swift; sourceTree = "<group>"; };
 		01E8169F21CE35810074E1DD /* Calanques.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calanques.swift; sourceTree = "<group>"; };
 		01E816A121CE38120074E1DD /* CalanqueCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalanqueCollection.swift; sourceTree = "<group>"; };
 		01E816A321CE3A660074E1DD /* ControllerAvecTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerAvecTableView.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				01E816AB21D09C510074E1DD /* ImageRonde.swift */,
 				019E442321D0A551008CD459 /* CalanqueCellAlternative.swift */,
 				019E442721D0E0CB008CD459 /* bouton_Arrondi.swift */,
+				019E442B21D0EBC3008CD459 /* monAnnotationView.swift */,
 			);
 			path = Vue;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 				0183456321BBBFE100F1D1BF /* AppDelegate.swift in Sources */,
 				01E816AA21D0617E0074E1DD /* CalanqueCell.swift in Sources */,
 				019E442A21D0E849008CD459 /* MonAnnotation.swift in Sources */,
+				019E442C21D0EBC3008CD459 /* monAnnotationView.swift in Sources */,
 				01E816A221CE38120074E1DD /* CalanqueCollection.swift in Sources */,
 				019E442821D0E0CB008CD459 /* bouton_Arrondi.swift in Sources */,
 				01E816A621CE3A800074E1DD /* ControllerAvecCarte.swift in Sources */,
