@@ -68,7 +68,9 @@ class monAnnotationView: MKAnnotationView {
     
     @objc func detail() {
         guard let anno = annotation as? MonAnnotation else { return }
-        controller?.toDetail(calanque: anno.calanque)
+        //controller?.toDetail(calanque: anno.calanque)
+        
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "Detail"), object: anno.calanque)
     }
     
     @objc func gps() {
