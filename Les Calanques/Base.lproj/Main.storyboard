@@ -322,6 +322,7 @@
                     <navigationItem key="navigationItem" id="fEA-2R-TjL">
                         <nil key="title"/>
                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="51R-WO-njA">
+                            <rect key="frame" x="81.5" y="7.5" width="212" height="29"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="27" id="YVE-WE-sFx"/>
