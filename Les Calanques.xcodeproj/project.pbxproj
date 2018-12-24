@@ -16,6 +16,8 @@
 		01E816A421CE3A660074E1DD /* ControllerAvecTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E816A321CE3A660074E1DD /* ControllerAvecTableView.swift */; };
 		01E816A621CE3A800074E1DD /* ControllerAvecCarte.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E816A521CE3A800074E1DD /* ControllerAvecCarte.swift */; };
 		01E816A821CE3A9B0074E1DD /* TableViewIntegreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E816A721CE3A9B0074E1DD /* TableViewIntegreController.swift */; };
+		01E816AA21D0617E0074E1DD /* CalanqueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E816A921D0617E0074E1DD /* CalanqueCell.swift */; };
+		01E816AC21D09C510074E1DD /* ImageRonde.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E816AB21D09C510074E1DD /* ImageRonde.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		01E816A321CE3A660074E1DD /* ControllerAvecTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerAvecTableView.swift; sourceTree = "<group>"; };
 		01E816A521CE3A800074E1DD /* ControllerAvecCarte.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerAvecCarte.swift; sourceTree = "<group>"; };
 		01E816A721CE3A9B0074E1DD /* TableViewIntegreController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewIntegreController.swift; sourceTree = "<group>"; };
+		01E816A921D0617E0074E1DD /* CalanqueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalanqueCell.swift; sourceTree = "<group>"; };
+		01E816AB21D09C510074E1DD /* ImageRonde.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRonde.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,8 @@
 		01E8169D21CE34620074E1DD /* Vue */ = {
 			isa = PBXGroup;
 			children = (
+				01E816A921D0617E0074E1DD /* CalanqueCell.swift */,
+				01E816AB21D09C510074E1DD /* ImageRonde.swift */,
 			);
 			path = Vue;
 			sourceTree = "<group>";
@@ -173,9 +179,11 @@
 			files = (
 				01E816A821CE3A9B0074E1DD /* TableViewIntegreController.swift in Sources */,
 				0183456321BBBFE100F1D1BF /* AppDelegate.swift in Sources */,
+				01E816AA21D0617E0074E1DD /* CalanqueCell.swift in Sources */,
 				01E816A221CE38120074E1DD /* CalanqueCollection.swift in Sources */,
 				01E816A621CE3A800074E1DD /* ControllerAvecCarte.swift in Sources */,
 				01E816A421CE3A660074E1DD /* ControllerAvecTableView.swift in Sources */,
+				01E816AC21D09C510074E1DD /* ImageRonde.swift in Sources */,
 				01E816A021CE35810074E1DD /* Calanques.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
